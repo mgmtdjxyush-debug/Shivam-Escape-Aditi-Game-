@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout code
@@ -30,7 +30,7 @@ jobs:
         sudo apt-get install -y build-essential ccache git libffi-dev libssl-dev xclip libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev libportmidi-dev libswscale-dev libavformat-dev libavcodec-dev zlib1g-dev
         sudo apt-get install -y autoconf automake libtool pkg-config cmake libasound2-dev libjack-dev
         pip install --upgrade pip
-        pip install "cython<3.0.0" virtualenv buildozer pygame==2.5.2
+        pip install "cython<3.0.0" virtualenv buildozer setuptools
 
     - name: Build apk with buildozer
       run: |
@@ -39,5 +39,5 @@ jobs:
     - name: Upload apk artifact
       uses: actions/upload-artifact@v4
       with:
-        name: package
+        name: Shivam-Game-APK
         path: bin/*.apk
