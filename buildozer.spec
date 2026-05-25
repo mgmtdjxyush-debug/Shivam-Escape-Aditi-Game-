@@ -5,12 +5,12 @@ package.domain = org.test
 source.dir = .
 source.include_exts = py,png,jpg,jpeg,ttf
 version = 0.1
-requirements = python3,pygame==2.5.2
+requirements = python3,pygame
 orientation = portrait
 fullscreen = 1
 android.api = 33
 android.minapi = 21
-android.ndk = 25b
+android.ndk = 26b
 
 [buildozer]
 log_level = 2
